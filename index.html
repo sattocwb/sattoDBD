@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08060b">
+  <title>sattoDBD | Bio</title>
+  <style>
+    :root {
+      --purple: #c45bff;
+      --purple-soft: #9b42d6;
+      --muted: #a69aaa;
+      --line: rgba(196, 91, 255, .10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 42px 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f4eef8;
+      background: #080709;
+      font-family: Inter, Arial, sans-serif;
+    }
+    .page { width: min(100%, 390px); text-align: center; }
+    .avatar-wrap {
+      width: 104px; height: 104px; margin: 0 auto 17px;
+      padding: 3px; border-radius: 50%;
+      background: linear-gradient(145deg, #e0a5ff, #7624b4 55%, #24102f);
+      box-shadow: 0 0 24px rgba(173, 65, 255, .22);
+    }
+    .avatar {
+      width: 100%; height: 100%; display: block;
+      object-fit: cover; object-position: center 28%;
+      border-radius: 50%; border: 3px solid #080709;
+    }
+    h1 {
+      margin: 0; font-size: 22px; font-weight: 750;
+      letter-spacing: .3px; color: var(--purple);
+      text-shadow: 0 0 14px rgba(196, 91, 255, .42);
+    }
+    .subtitle { margin: 10px 0 27px; color: var(--muted); font-size: 13px; }
+    .links { display: grid; gap: 10px; }
+    .link {
+      min-height: 53px; display: flex; align-items: center; gap: 15px;
+      padding: 0 17px; color: #eee7f2; text-decoration: none;
+      text-align: left; border: 1px solid var(--line); border-radius: 10px;
+      background: rgba(255,255,255,.008);
+      font-size: 14px; font-weight: 650;
+      transition: border-color .2s, background .2s, transform .2s, box-shadow .2s;
+    }
+    .link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(196,91,255,.55);
+      background: rgba(139,48,190,.10);
+      box-shadow: 0 0 18px rgba(153,54,214,.12);
+    }
+    .symbol {
+      width: 27px; height: 27px; flex: 0 0 27px;
+      display: grid; place-items: center;
+      border: 1px solid rgba(196,91,255,.48);
+      border-radius: 8px; color: var(--purple);
+      background: rgba(158,55,210,.10);
+      font-size: 10px; font-weight: 800; letter-spacing: -.3px;
+    }
+    .music {
+      margin: 0 0 17px; padding: 13px 15px;
+      display: flex; align-items: center; gap: 12px;
+      border: 1px solid var(--line); border-radius: 10px;
+      background: rgba(255,255,255,.012); text-align: left;
+    }
+    .disc {
+      width: 34px; height: 34px; flex: 0 0 34px;
+      display: grid; place-items: center; border-radius: 50%;
+      color: var(--purple); border: 1px solid rgba(196,91,255,.5);
+      background: rgba(158,55,210,.10); font-size: 16px;
+    }
+    .track { min-width: 0; flex: 1; }
+    .track strong { display: block; font-size: 12px; color: #eee7f2; }
+    .track span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+    .play {
+      width: 34px; height: 34px; border: 1px solid rgba(196,91,255,.55);
+      border-radius: 50%; color: var(--purple); background: transparent;
+      cursor: pointer; font-size: 13px;
+    }
+    .play:hover { background: rgba(158,55,210,.18); }
+    footer { margin-top: 37px; color: #665d6b; font-size: 11px; }
+    @media (max-width: 420px) {
+      body { align-items: flex-start; padding-top: 58px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="avatar-wrap">
+      <img class="avatar" src="cosplay.png" alt="Foto de perfil do sattoDBD">
+    </div>
+
+    <h1>sattoDBD</h1>
+    <p class="subtitle">Dead by Daylight Player</p>
+
+    <section class="music" aria-label="Player de música">
+      <div class="disc">♫</div>
+      <div class="track">
+        <strong id="track-title">Minha música</strong>
+        <span id="track-status">Clique para reproduzir</span>
+      </div>
+      <button class="play" id="play-button" type="button" aria-label="Reproduzir música">▶</button>
+      <audio id="audio" src="musica.mp3" preload="metadata"></audio>
+    </section>
+
+    <nav class="links" aria-label="Redes sociais">
+      <!-- Troque os endereços # pelos seus links reais -->
+      <a class="link" href="https://www.tiktok.com/@sattodbd" target="_blank" rel="noopener"><span class="symbol">TT</span><span>TikTok</span></a>
+      <a class="link" href="#" target="_blank" rel="noopener"><span class="symbol">IG</span><span>Instagram</span></a>
+      <a class="link" href="#" target="_blank" rel="noopener"><span class="symbol">LP</span><span>LivePix</span></a>
+      <a class="link" href="https://www.youtube.com/@sattoDBD" target="_blank" rel="noopener"><span class="symbol">YT</span><span>YouTube</span></a>
+      <a class="link" href="https://www.twitch.tv/sattodbd" target="_blank" rel="noopener"><span class="symbol">TW</span><span>Twitch</span></a>
+      <a class="link" href="#" target="_blank" rel="noopener"><span class="symbol">SP</span><span>Spotify</span></a>
+      <a class="link" href="#" target="_blank" rel="noopener"><span class="symbol">DC</span><span>Discord</span></a>
+    </nav>
+
+    <footer>© 2026 sattoDBD. Todos os direitos reservados.</footer>
+  </main>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playButton = document.getElementById('play-button');
+    const status = document.getElementById('track-status');
+
+    playButton.addEventListener('click', async () => {
+      if (audio.paused) {
+        try {
+          await audio.play();
+          playButton.textContent = 'Ⅱ';
+          playButton.setAttribute('aria-label', 'Pausar música');
+          status.textContent = 'Reproduzindo agora';
+        } catch {
+          status.textContent = 'Adicione musica.mp3 à pasta do site';
+        }
+      } else {
+        audio.pause();
+        playButton.textContent = '▶';
+        playButton.setAttribute('aria-label', 'Reproduzir música');
+        status.textContent = 'Pausado';
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      playButton.textContent = '▶';
+      playButton.setAttribute('aria-label', 'Reproduzir música');
+      status.textContent = 'Clique para reproduzir';
+    });
+    audio.addEventListener('error', () => {
+      status.textContent = 'Adicione musica.mp3 à pasta do site';
+    });
+  </script>
+</body>
+</html>

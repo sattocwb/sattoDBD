@@ -1,0 +1,11 @@
+SATTO BIO
+
+1. Abra o arquivo index.html no navegador para visualizar.
+2. A foto já está incluída como cosplay.png.
+3. Para ativar a música, coloque um arquivo chamado musica.mp3 nesta mesma pasta.
+4. YouTube, TikTok e Twitch já estão configurados. No index.html, substitua os href="#" restantes pelos links reais das outras redes.
+5. Para publicar, envie a pasta/projeto para a Vercel.
+
+Arquivos:
+- index.html: página do site
+- cosplay.png: foto de perfil enviada
